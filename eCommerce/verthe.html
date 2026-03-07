@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verthe</title>
+    <link rel="stylesheet" href="verthe.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="women.css">
+    <link rel="stylesheet" href="men.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav">
+        <div class="nav_left">
+            <div class="nav_left_img">
+
+                <img src="images/logo-.png" alt="">
+            </div>
+        </div>
+        <div class="nav_right">
+            <div class="nav_a">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <div class="cat" onclick="drop()">
+                    <a>Category</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="currentcolor">
+                        <path d="M480-360 280-560h400L480-360Z" />
+                    </svg>
+                </div>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="menu">
+                <svg onclick="click()" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 64 64"
+                    style="enable-background:new 0 0 512 512" xml:space="preserve" class="hovered-paths">
+                    <g>
+                        <path
+                            d="M55.3 62H41.7C38 62 35 59 35 55.3V37c0-1.1.9-2 2-2h18.3c3.7 0 6.7 3 6.7 6.7v13.6c0 3.7-3 6.7-6.7 6.7zM39 39v16.3c0 1.5 1.2 2.7 2.7 2.7h13.6c1.5 0 2.7-1.2 2.7-2.7V41.7c0-1.5-1.2-2.7-2.7-2.7zM22.3 62H8.7C5 62 2 59 2 55.3V41.7C2 38 5 35 8.7 35H27c1.1 0 2 .9 2 2v18.3c0 3.7-3 6.7-6.7 6.7zM8.7 39C7.2 39 6 40.2 6 41.7v13.6C6 56.8 7.2 58 8.7 58h13.6c1.5 0 2.7-1.2 2.7-2.7V39zM55.3 29H37c-1.1 0-2-.9-2-2V8.7C35 5 38 2 41.7 2h13.6C59 2 62 5 62 8.7v13.6c0 3.7-3 6.7-6.7 6.7zM39 25h16.3c1.5 0 2.7-1.2 2.7-2.7V8.7C58 7.2 56.8 6 55.3 6H41.7C40.2 6 39 7.2 39 8.7zM27 29H8.7C5 29 2 26 2 22.3V8.7C2 5 5 2 8.7 2h13.6C26 2 29 5 29 8.7V27c0 1.1-.9 2-2 2zM8.7 6C7.2 6 6 7.2 6 8.7v13.6C6 23.8 7.2 25 8.7 25H25V8.7C25 7.2 23.8 6 22.3 6z"
+                            fill="currentcolor" opacity="1" data-original="#000000" class="hovered-path"></path>
+                    </g>
+                </svg>
+
+            </div>
+            <div class="search">
+                <div class="search_svg">
+                    <abbr title="login">
+                        <a href="login.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0"
+                                viewBox="0 0 100 100" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                                <g>
+                                    <path
+                                        d="M11.4 93.3h-.2c-1.3-.1-2.2-1.2-2.1-2.4 1.3-19.1 19.3-34 40.9-34s39.6 14.9 40.9 33.9c.1 1.3-.9 2.3-2.1 2.4-1.3.1-2.3-.9-2.4-2.1C85.2 74.4 69.2 61.4 50 61.4c-19.3 0-35.3 13.1-36.4 29.8-.1 1.2-1.1 2.1-2.2 2.1zM50 52.3c-12.6 0-22.8-10.2-22.8-22.8S37.4 6.7 50 6.7s22.8 10.2 22.8 22.8S62.6 52.3 50 52.3zm0-41c-10 0-18.2 8.2-18.2 18.2S40 47.7 50 47.7s18.2-8.2 18.2-18.2S60 11.3 50 11.3z"
+                                        fill="currentcolor" opacity="1" data-original="#000000"></path>
+                                </g>
+                            </svg>
+                        </a>
+                    </abbr>
+                </div>
+                <div class="search_svg">
+                    <abbr title="Search">
+                        <a onclick="fun()">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0"
+                                viewBox="0 0 48 48" style="enable-background:new 0 0 512 512" xml:space="preserve"
+                                class="">
+                                <g>
+                                    <path
+                                        d="m40.9 39.485-7.813-7.812a14.878 14.878 0 0 0 3.72-9.865c0-4.007-1.56-7.774-4.393-10.607s-6.6-4.393-10.606-4.393S14.034 8.368 11.2 11.2s-4.393 6.6-4.393 10.607 1.56 7.773 4.393 10.606 6.6 4.394 10.607 4.394c3.67 0 7.13-1.323 9.865-3.721l7.812 7.812a.997.997 0 0 0 1.414 0 1 1 0 0 0 0-1.414zM12.614 31c-2.455-2.456-3.807-5.72-3.807-9.192s1.352-6.737 3.807-9.193c2.456-2.455 5.72-3.807 9.193-3.807S28.544 10.16 31 12.615c2.455 2.456 3.808 5.72 3.808 9.193S33.455 28.544 31 31c-2.456 2.455-5.72 3.808-9.192 3.808S15.07 33.455 12.615 31z"
+                                        fill="currentcolor" opacity="1" data-original="#000000" class=""></path>
+                                </g>
+                            </svg>
+                        </a>
+                    </abbr>
+                </div>
+                <div class="search_svg">
+                    <abbr title="Favorites">
+                        <a href="fav.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0"
+                                viewBox="0 0 512.001 512" style="enable-background:new 0 0 512 512"
+                                xml:space="preserve">
+                                <g>
+                                    <path
+                                        d="M256 455.516c-7.29 0-14.316-2.641-19.793-7.438-20.684-18.086-40.625-35.082-58.219-50.074l-.09-.078c-51.582-43.957-96.125-81.918-127.117-119.313C16.137 236.81 0 197.172 0 153.871c0-42.07 14.426-80.883 40.617-109.293C67.121 15.832 103.488 0 143.031 0c29.555 0 56.621 9.344 80.446 27.77C235.5 37.07 246.398 48.453 256 61.73c9.605-13.277 20.5-24.66 32.527-33.96C312.352 9.344 339.418 0 368.973 0c39.539 0 75.91 15.832 102.414 44.578C497.578 72.988 512 111.801 512 153.871c0 43.3-16.133 82.938-50.777 124.738-30.993 37.399-75.532 75.356-127.106 119.309-17.625 15.016-37.597 32.039-58.328 50.168a30.046 30.046 0 0 1-19.789 7.43zM143.031 29.992c-31.066 0-59.605 12.399-80.367 34.914-21.07 22.856-32.676 54.45-32.676 88.965 0 36.418 13.535 68.988 43.883 105.606 29.332 35.394 72.961 72.574 123.477 115.625l.093.078c17.66 15.05 37.68 32.113 58.516 50.332 20.961-18.254 41.012-35.344 58.707-50.418 50.512-43.051 94.137-80.223 123.469-115.617 30.344-36.618 43.879-69.188 43.879-105.606 0-34.516-11.606-66.11-32.676-88.965-20.758-22.515-49.3-34.914-80.363-34.914-22.758 0-43.653 7.235-62.102 21.5-16.441 12.719-27.894 28.797-34.61 40.047-3.452 5.785-9.53 9.238-16.261 9.238s-12.809-3.453-16.262-9.238c-6.71-11.25-18.164-27.328-34.61-40.047-18.448-14.265-39.343-21.5-62.097-21.5zm0 0"
+                                        fill="currentcolor" opacity="1" data-original="#000000"></path>
+                                </g>
+                            </svg>
+                        </a>
+                    </abbr>
+                </div>
+                <div class="search_svg">
+                    <abbr title="Cart">
+                        <a href="trial.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0"
+                                viewBox="0 0 48 48" style="enable-background:new 0 0 512 512" xml:space="preserve"
+                                fill-rule="evenodd">
+                                <g>
+                                    <path
+                                        d="M14.519 13.5h-2.657a3.5 3.5 0 0 0-3.491 3.251l-1.714 24a3.5 3.5 0 0 0 3.491 3.749h27.704a3.502 3.502 0 0 0 3.491-3.749l-1.714-24a3.5 3.5 0 0 0-3.491-3.251H33.5V13A9.5 9.5 0 0 0 24 3.5c-5.055 0-9.727 4.026-9.5 9.5l.019.5zm18.981 3V24a1.5 1.5 0 0 1-3 0v-7.5h-13V24a1.5 1.5 0 0 1-3 0s.13-3.505.087-7.5h-2.725a.5.5 0 0 0-.498.464l-1.715 24a.5.5 0 0 0 .499.536h27.704a.502.502 0 0 0 .499-.536l-1.715-24a.5.5 0 0 0-.498-.464zm-3-3V13a6.5 6.5 0 1 0-13 0v.5z"
+                                        fill="currentcolor" opacity="1" data-original="#000000"></path>
+                                </g>
+                            </svg>
+                        </a>
+                    </abbr>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <button onclick="drop()">Menu</button> -->
+
+    <div id="dropdown">
+        <div class="dropdown_in">
+            <a href="men.html">Men</a>
+        </div>
+        <div class="dropdown_in">
+            <a href="women.html">Women</a>
+        </div>
+        <div class="dropdown_in">
+            <a href="unisex.html">Unisex</a>
+        </div>
+    </div>
+    <div id="menu_c">
+        <div class="menu_c_in">
+            <div class="menu_top">
+                <div class="menu_top_d">
+                    <a href="about.html">About</a>
+                </div>
+                <div class="menu_top_d">
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="menu_top">
+                <div class="menu_top_d">
+                    <a href="login.html">Login</a>
+                </div>
+                <div class="menu_top_d">
+                    <a href="fav.html">Favourites</a>
+                </div>
+                <div class="menu_top_d">
+                    <a href="trial.html">Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products -->
+    <div class="products">
+        <div class="products_in">
+            <div class="Home_cat_head">
+                <a href="">Featured Products</a>
+            </div>
+            <div class="men_cat">
+                <div class="catt">
+                    <div class="catt_img">
+                        <img src="images/up4.jpg" alt="">
+                    </div>
+                    <div class="catt_desc">
+                        <div class="catt_desc_top">
+                            <a href="">Bella Vita OUD</a>
+                        </div>
+                        <div class="catt_desc_top">
+                            <a href="">Perfume for Unisex | Premium Fragrance </a>
+
+                        </div>
+                        <div class="catt_desc_bott">
+                            <div class="catt_desc_bot">
+                                <div class="catt_l">
+                                    <a href="">₹1500</a>
+                                    <strike style="color: gray; ">₹1799</strike>
+                                    <a href="">15% off</a>
+                                </div>
+                                <div class="catt_l">
+                                    <p>125ml</p>
+                                </div>
+                            </div>
+                            <div class="catt_desc_bot">
+                                <button onclick="pop('images/up4.jpg','Bella Vita OUD || Perfume for Unisex | Premium Fragrance', '₹1500','1799')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catt">
+                    <div class="catt_img">
+                        <img src="images/p3.jpg" alt="">
+                    </div>
+                    <div class="catt_desc">
+                        <div class="catt_desc_top">
+                            <a href="">Bella Vita CEO</a>
+                        </div>
+                        <div class="catt_desc_top">
+                            <a href="">Perfume for Men | Premium Fragrance </a>
+
+                        </div>
+                        <div class="catt_desc_bott">
+                            <div class="catt_desc_bot">
+                                <div class="catt_l">
+                                    <a href="">₹1699</a>
+                                    <strike style="color: gray; ">₹2249</strike>
+                                    <a href="">15% off</a>
+                                </div>
+                                <div class="catt_l">
+                                    <p>125ml</p>
+                                </div>
+                            </div>
+                            <div class="catt_desc_bot">
+                                <button onclick="pop('images/p3.jpg','Bella Vita CEO || Perfume for Men | Premium Fragrance','₹1699','2249')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="men_cat">
+                    <div class="catt">
+                        <div class="catt_img">
+                            <img src="images/wp8.jpg" alt="">
+                        </div>
+                        <div class="catt_desc">
+                            <div class="catt_desc_top">
+                                <a href="">Signature CYCLONE</a>
+                            </div>
+                            <div class="catt_desc_top">
+                                <a href="">Perfume for Women | Premium Fragrance </a>
+
+                            </div>
+                            <div class="catt_desc_bott">
+                                <div class="catt_desc_bot">
+                                    <div class="catt_l">
+                                        <a href="">₹1599</a>
+                                        <strike style="color: gray; ">₹1849</strike>
+                                        <a href="">15% off</a>
+                                    </div>
+                                    <div class="catt_l">
+                                        <p>125ml</p>
+                                    </div>
+                                </div>
+                                <div class="catt_desc_bot">
+                                    <button onclick="pop('images/wp8.jpg','Signature CYCLONE || Perfume for Women | Premium Fragrance', '₹1599','1849')">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catt">
+                        <div class="catt_img">
+                            <img src="images/wp7.jpg" alt="">
+                        </div>
+                        <div class="catt_desc">
+                            <div class="catt_desc_top">
+                                <a href="">Valentino ROMA DONNA</a>
+                            </div>
+                            <div class="catt_desc_top">
+                                <a href="">Perfume for Women | Premium Fragrance </a>
+
+                            </div>
+                            <div class="catt_desc_bott">
+                                <div class="catt_desc_bot">
+                                    <div class="catt_l">
+                                        <a href="">₹1500</a>
+                                        <strike style="color: gray; ">₹1799</strike>
+                                        <a href="">15% off</a>
+                                    </div>
+                                    <div class="catt_l">
+                                        <p>125ml</p>
+                                    </div>
+                                </div>
+                                <div class="catt_desc_bot">
+                                    <button onclick="pop('images/wp7.jpg','Valentino ROMA DONNA || Perfume for Women | Premium Fragrance','₹1500','1799')">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <!-- PopUp -->
+    <div id="parent_div">
+        <div class="my_div">
+            <div class="popUp">
+                <div class="popUp_left">
+                    <div class="popUp_left_img">
+
+                        <img src="images/ab.jpg" id="p_img">
+                    </div>
+                </div>
+                <div class="popUp_right">
+                    <div class="popUp_text">
+                        <p id="p_text"></p>
+                    </div>
+                    <div class="popUp_price">
+                        <div class="popUp_price_but">
+                            <button onclick="decr()">-</button>
+                            <p id="pcount">1</p>
+                            <button onclick="incr()">+</button>
+                        </div>
+                    </div>
+                    <div class="popUp_price">
+                        <div class="prp">
+                            <a>-15%</a>
+                            <a>Rs</a>
+                            <a id="p_price">1500</a>
+                        </div>
+                        <div class="mrp">
+                            <strike id="p_strike">Rs 1700</strike>
+                        </div>
+                    </div>
+                    <div class="popUp_Buy">
+                        <Button onclick="closeD()">Buy Now</Button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/Poster.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="images/Poster1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="images/Poster2.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script>
+        function fun(){
+            let ce=document.createElement('div')
+            let ct=document.createElement('div')
+            let hd=document.createElement('div')
+            let hd1=document.createElement('div')
+            let hd2=document.createElement('div')
+            let hd3=document.createElement('img')
+            let sr=document.createElement('div')
+            let lt=document.createElement('div')
+            let lt_a=document.createElement('a')
+            let caat=document.createElement('div')
+            let caat1=document.createElement('div')
+            let caat2=document.createElement('div')
+            let caat3=document.createElement('div')
+            let bottt=document.createElement('div')
+            let bottt_l=document.createElement('div')
+            let bottt_l_a=document.createElement('a')
+            let bottt_r=document.createElement('div')
+            let bottt_r_butt1=document.createElement('button')
+            let bottt_r_butt1_t=document.createTextNode('Store Locator')
+            let bottt_r_butt2=document.createElement('button')
+            let bottt_r_butt2_t=document.createTextNode('Contact Us')
+
+            hd.setAttribute('class','div_in_head')
+            hd1.setAttribute('class','div_in_head_l')
+            hd2.setAttribute('class','div_in_head_r')
+            hd3.setAttribute('src','images/logo-.png')
+            sr.setAttribute('class','sr')
+            lt.setAttribute('class','lt')
+            lt_a.setAttribute('class','lt_a')
+            caat.setAttribute('class','caat')
+            caat1.setAttribute('class','caat_in')
+            caat2.setAttribute('class','caat_in')
+            caat3.setAttribute('class','caat_in')
+            bottt.setAttribute('class','bottt')
+            bottt_l.setAttribute('class','bottt_l')
+            bottt_l_a.setAttribute('class','bottt_l_a')
+            bottt_r.setAttribute('class','bottt_r')
+            bottt_r_butt1.setAttribute('class','botttr')
+            bottt_r_butt2.setAttribute('class','botttr')
+            ct.setAttribute('class','div_in')
+            hd.appendChild(hd1)
+            hd.appendChild(hd2)
+            hd1.appendChild(hd3)
+            ct.appendChild(hd)
+            ct.appendChild(sr)
+            ct.appendChild(lt)
+            ct.appendChild(caat)
+            caat.appendChild(caat1)
+            caat.appendChild(caat2)
+            caat.appendChild(caat3)
+            ct.appendChild(bottt)
+            bottt.appendChild(bottt_l)
+            bottt_l.appendChild(bottt_l_a)
+            bottt.appendChild(bottt_r)
+            bottt_r.appendChild(bottt_r_butt1)
+            bottt_r_butt1.appendChild(bottt_r_butt1_t)
+            bottt_r_butt2.appendChild(bottt_r_butt2_t)
+            bottt_r.appendChild(bottt_r_butt2)
+            lt.appendChild(lt_a)
+            ce.appendChild(ct)
+            ce.setAttribute('class','my_div')
+            document.getElementById('parent_div').appendChild(ce)
+        }
+    </script> -->
+
+    <!-- <script>
+
+        function pop(pimage,ptext,pprice,pstrike) {
+            let p = document.createElement('div')
+            let pop =document.createElement('div')
+            let pop_l =document.createElement('div')
+            let pop_l_img =document.createElement('div')
+            let pop_l_imgg =document.createElement('img')
+            let pop_r =document.createElement('div')
+            let pop_tx =document.createElement('div')
+            let pop_tx_p =document.createElement('p')
+            let pop_pr =document.createElement('div')
+            let pop_pr_bt =document.createElement('div')
+            let pop_pr_bt1 =document.createElement('button')
+            let pop_pr_p =document.createElement('div')
+            let pop_pr_bt2 =document.createElement('button')
+            let pop_pr_2 =document.createElement('div')
+            let pop_prp =document.createElement('div')
+            let pop_prp_a1 =document.createElement('a')
+            let pop_prp_a2 =document.createElement('a')
+            let pop_mrp =document.createElement('div')
+            let pop_mrp_a =document.createElement('a')
+            let pop_mrp_str =document.createElement('strike')
+            let pop_buy =document.createElement('div')
+            let pop_buy_bt =document.createElement('button')
+            pop_buy_bt.setAttribute('id','popUp_Buy_but')
+            pop_buy.setAttribute('class','popUp_Buy')
+            pop_mrp_str.setAttribute('id','p_strike')
+            pop_mrp.setAttribute('class','mrp')
+            pop_prp_a2.setAttribute('id','p_price')
+            pop_prp.setAttribute('class','prp')
+            pop_pr_2.setAttribute('class','popUp_price')
+            pop_pr_bt.setAttribute('class','popUp_price_but')
+            pop_pr_bt1.setAttribute('class','popUp_price_butt')
+            pop_pr_p.setAttribute('class','price-co')
+            pop_pr_bt2.setAttribute('class','popUp_price_butt')
+            pop_pr.setAttribute('class','popUP_price')
+            pop_tx_p.setAttribute('id','p_text')
+            pop_tx.setAttribute('class','popUp_text')
+            pop_r.setAttribute('class','popUp_right')
+            pop_l_imgg.setAttribute('src',pimage)
+            pop_l_img.setAttribute('class','popUp_left_img')
+            pop_l.setAttribute('class','popUp_left')
+            pop.setAttribute('class','popUp')
+            p.setAttribute('class','my_div')
+            pop.appendChild(pop_l)
+            pop_l.appendChild(pop_l_img)
+            pop_l_img.appendChild(pop_l_imgg)
+            pop.appendChild(pop_r)
+            pop_r.appendChild(pop_tx)
+            pop_tx.appendChild(pop_tx_p)
+            pop_r.appendChild(pop_pr)
+            pop_pr.appendChild(pop_pr_bt)
+            pop_pr_bt.appendChild(pop_pr_bt1)
+            pop_pr.appendChild(pop_pr_p)
+            pop_pr_bt.appendChild(pop_pr_bt2)
+            pop_r.appendChild(pop_pr_2)
+            pop_pr_2.appendChild(pop_prp)
+            pop_prp.appendChild(pop_prp_a1)
+            pop_prp.appendChild(pop_prp_a2)
+            pop_pr_2.appendChild(pop_mrp)
+            pop_mrp.appendChild(pop_mrp_a)
+            pop_mrp.appendChild(pop_mrp_str)
+            pop_r.appendChild(pop_buy)
+            pop_buy.appendChild(pop_buy_bt)
+            p.appendChild(pop)
+            document.getElementById('parent_div').appendChild(p)
+            
+            //let p = document.querySelector('.my_div')
+            if(p.style.display === 'block' || p.style.display==='flex'){
+              p.style.display='none'
+            }
+            else{
+                p.style.display='block'
+                p.style.display='flex'
+            }
+
+            document.getElementById('p_price').innerHTML=pprice
+            document.getElementById('p_text').innerHTML=ptext
+            document.getElementById('p_strike').innerHTML=pstrike
+            pop_pr_bt1.innerHTML='-'
+            pop_pr_bt2.innerHTML='+'
+            pop_buy_bt.innerHTML='Buy Now'
+            pop_buy_bt.addEventListener('click',closeD)
+            pop_pr_p.innerHTML='1'
+            pop_prp_a1.innerHTML='-15%'
+            //document.getElementById('p_img').src=pimage
+        }
+       function closeD(){
+            document.querySelector('.my_div').style.display='none'
+       }
+    </script> -->
+</body>
+
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="about.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="whole">
+
+        <!-- Navigation Bar -->
+        <div class="nav">
+            <div class="nav_left">
+                <div class="nav_left_img">
+
+                    <img src="images/logo-.png" alt="">
+                </div>
+            </div>
+            <div class="nav_right">
+                <div class="nav_a">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <div class="cat" onclick="drop()">
+                        <a>Category</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="currentcolor">
+                            <path d="M480-360 280-560h400L480-360Z" />
+                        </svg>
+                    </div>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="menu">
+                    <svg onclick="click()" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0"
+                        viewBox="0 0 64 64" style="enable-background:new 0 0 512 512" xml:space="preserve"
+                        class="hovered-paths">
+                        <g>
+                            <path
+                                d="M55.3 62H41.7C38 62 35 59 35 55.3V37c0-1.1.9-2 2-2h18.3c3.7 0 6.7 3 6.7 6.7v13.6c0 3.7-3 6.7-6.7 6.7zM39 39v16.3c0 1.5 1.2 2.7 2.7 2.7h13.6c1.5 0 2.7-1.2 2.7-2.7V41.7c0-1.5-1.2-2.7-2.7-2.7zM22.3 62H8.7C5 62 2 59 2 55.3V41.7C2 38 5 35 8.7 35H27c1.1 0 2 .9 2 2v18.3c0 3.7-3 6.7-6.7 6.7zM8.7 39C7.2 39 6 40.2 6 41.7v13.6C6 56.8 7.2 58 8.7 58h13.6c1.5 0 2.7-1.2 2.7-2.7V39zM55.3 29H37c-1.1 0-2-.9-2-2V8.7C35 5 38 2 41.7 2h13.6C59 2 62 5 62 8.7v13.6c0 3.7-3 6.7-6.7 6.7zM39 25h16.3c1.5 0 2.7-1.2 2.7-2.7V8.7C58 7.2 56.8 6 55.3 6H41.7C40.2 6 39 7.2 39 8.7zM27 29H8.7C5 29 2 26 2 22.3V8.7C2 5 5 2 8.7 2h13.6C26 2 29 5 29 8.7V27c0 1.1-.9 2-2 2zM8.7 6C7.2 6 6 7.2 6 8.7v13.6C6 23.8 7.2 25 8.7 25H25V8.7C25 7.2 23.8 6 22.3 6z"
+                                fill="currentcolor" opacity="1" data-original="#000000" class="hovered-path"></path>
+                        </g>
+                    </svg>
+
+                </div>
+                <div class="search">
+                    <div class="search_svg">
+                        <abbr title="login">
+                            <a href="login.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0"
+                                    viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve"
+                                    class="">
+                                    <g>
+                                        <circle cx="12" cy="7" r="5" fill="currentColor" opacity="1"
+                                            data-original="#000000" class=""></circle>
+                                        <path
+                                            d="M12 13c-4.962 0-9 3.589-9 8a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1c0-4.411-4.037-8-9-8z"
+                                            fill="currentColor" opacity="1" data-original="#000000" class=""></path>
+                                    </g>
+                                </svg>
+                            </a>
+                        </abbr>
+                    </div>
+                    <div class="search_svg">
+                        <abbr title="Search">
+                            <a href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0"
+                                    viewBox="0 0 118.783 118.783" style="enable-background:new 0 0 512 512"
+                                    xml:space="preserve">
+                                    <g>
+                                        <path
+                                            d="M115.97 101.597 88.661 74.286a47.75 47.75 0 0 0 7.333-25.488c0-26.509-21.49-47.996-47.998-47.996S0 22.289 0 48.798c0 26.51 21.487 47.995 47.996 47.995a47.776 47.776 0 0 0 27.414-8.605l26.984 26.986a9.574 9.574 0 0 0 6.788 2.806 9.58 9.58 0 0 0 6.791-2.806 9.602 9.602 0 0 0-.003-13.577zM47.996 81.243c-17.917 0-32.443-14.525-32.443-32.443s14.526-32.444 32.443-32.444c17.918 0 32.443 14.526 32.443 32.444S65.914 81.243 47.996 81.243z"
+                                            fill="currentColor" opacity="1" data-original="#000000"></path>
+                                    </g>
+                                </svg>
+                            </a>
+                        </abbr>
+                    </div>
+                    <div class="search_svg">
+                        <abbr title="Favorites">
+                            <a href="fav.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0"
+                                    viewBox="0 0 511.855 511.855" style="enable-background:new 0 0 512 512"
+                                    xml:space="preserve" class="hovered-paths">
+                                    <g>
+                                        <path
+                                            d="M466.186 74.688C436.688 45.19 397.47 28.945 355.754 28.945c-36.894 0-71.836 12.708-99.827 36.051-27.989-23.343-62.933-36.051-99.825-36.051-41.716 0-80.936 16.245-110.433 45.743-60.891 60.891-60.892 159.97 0 220.865l171.249 171.249c10.389 10.387 24.242 16.107 39.01 16.107s28.621-5.721 39.01-16.108l171.248-171.248c60.892-60.894 60.892-159.974 0-220.865z"
+                                            fill="currentColor" opacity="1" data-original="#000000"
+                                            class="hovered-path"></path>
+                                    </g>
+                                </svg>
+                            </a>
+                        </abbr>
+                    </div>
+                    <div class="search_svg">
+                        <abbr title="Cart">
+                            <a href="trial.html">
+                                <svg class="icon icon-cart" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M3 5h2l2.3 9.6a1.8 1.8 0 0 0 1.8 1.4h7.8
+               a1.8 1.8 0 0 0 1.8-1.4L21 8H6"></path>
+                                    <circle cx="9" cy="20" r="1.4"></circle>
+                                    <circle cx="17" cy="20" r="1.4"></circle>
+                                </svg>
+                            </a>
+                        </abbr>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <button onclick="drop()">Menu</button> -->
+
+        <div id="dropdown">
+            <div class="dropdown_in">
+                <a href="men.html">Men</a>
+            </div>
+            <div class="dropdown_in">
+                <a href="women.html">Women</a>
+            </div>
+            <div class="dropdown_in">
+                <a href="unisex.html">Unisex</a>
+            </div>
+        </div>
+
+        <!-- menu drop -->
+
+        <div id="menu_c">
+            <div class="menu_c_in">
+                <div class="menu_top">
+                    <div class="menu_top_d">
+                        <a href="index.html">Home</a>
+                    </div>
+                    <div class="menu_top_d">
+                        <a href="about.html">About</a>
+                    </div>
+                    <div class="menu_top_d">
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <div class="menu_top">
+                    <div class="menu_top_d">
+                        <a href="login.html">Login</a>
+                    </div>
+                    <div class="menu_top_d">
+                        <a href="fav.html">Favourites</a>
+                    </div>
+                    <div class="menu_top_d">
+                        <a href="trial.html">Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- About -->
+    <div class="about">
+        <div class="about_in">
+            <div class="abt_area">
+                <div class="abt_area_l">
+                    <div class="abt_head">
+                        <a href="">About Us</a>
+                    </div>
+                    <div class="abt_l_a">
+
+                        <a>Purescent represents the art of refined fragrance, where every creation is a blend of
+                            elegance and intention. We believe a fragrance should do more than scent the skin — it
+                            should reflect personality, confidence, and individuality.</a>
+                        <a>Each Purescent fragrance is carefully crafted using premium ingredients, ensuring a perfect
+                            balance of depth, purity, and long-lasting impression. Our meticulous approach to perfumery
+                            allows every scent to unfold beautifully and remain memorable.</a>
+                        <a>Designed for individuals who appreciate sophistication and timeless luxury, Purescent
+                            transforms fragrance into an experience. At Purescent, perfume is not simply worn — it is
+                            felt, remembered, and lived.</a>
+                    </div>
+                </div>
+                <div class="abt_area_r">
+                    <img src="images/ab.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="abt2">
+                <div class="abt2_l">
+                    <div class="abt2_l_img">
+                        <img src="images/brand.jpg" alt="">
+                    </div>
+                </div>
+                <div class="abt2_r">
+                    <div class="abt2_head">
+                        <a href="">Best Premium Brands</a>
+                    </div>
+                    <div class="abt2_txt">
+                        <p>Purescent is a refined destination for premium fragrances, crafted with precision and
+                            artistry.
+                            Our collection reflects purity, balance, and timeless sophistication in every scent.
+                            Each fragrance is thoughtfully designed using high-quality ingredients for a lasting
+                            impression.
+                            Experience elevated luxury and discover the true essence of refinement with Purescent.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                <!-- Footer -->
+                <div class="footer">
+                    <div class="footer_in">
+                        <div class="ft_top">
+                            <a>Copyright © PureScent 2026. All Rights Reserved</a>
+                        </div>
+                        <div class="ft_top">
+                            <div class="ft_svg">
+                                <a href="https://www.instagram.com">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0"
+                                        viewBox="0 0 24 24" style="enable-background:new 0 0 512 512"
+                                        xml:space="preserve" class="hovered-paths">
+                                        <g>
+                                            <path
+                                                d="M12 2.162c3.204 0 3.584.012 4.849.07 1.308.06 2.655.358 3.608 1.311.962.962 1.251 2.296 1.311 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.059 1.301-.364 2.661-1.311 3.608-.962.962-2.295 1.251-3.608 1.311-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.291-.059-2.669-.371-3.608-1.311-.957-.957-1.251-2.304-1.311-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.059-1.296.367-2.664 1.311-3.608.96-.96 2.299-1.251 3.608-1.311 1.265-.058 1.645-.07 4.849-.07M12 0C8.741 0 8.332.014 7.052.072 5.197.157 3.355.673 2.014 2.014.668 3.36.157 5.198.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.085 1.853.603 3.7 1.942 5.038 1.345 1.345 3.186 1.857 5.038 1.942C8.332 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 1.854-.085 3.698-.602 5.038-1.942 1.347-1.347 1.857-3.184 1.942-5.038.058-1.28.072-1.689.072-4.948 0-3.259-.014-3.668-.072-4.948-.085-1.855-.602-3.698-1.942-5.038C20.643.671 18.797.156 16.948.072 15.668.014 15.259 0 12 0z"
+                                                fill="currentColor" opacity="1" data-original="#000000"
+                                                class="hovered-path"></path>
+                                            <path
+                                                d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"
+                                                fill="currentColor" opacity="1" data-original="#000000"
+                                                class="hovered-path"></path>
+                                            <circle cx="18.406" cy="5.594" r="1.44" fill="currentColor" opacity="1"
+                                                data-original="#000000" class="hovered-path"></circle>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="ft_svg">
+                                <a href="https://www.facebook.com/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0"
+                                        viewBox="0 0 24 24" style="enable-background:new 0 0 512 512"
+                                        xml:space="preserve" class="hovered-paths">
+                                        <g>
+                                            <path
+                                                d="M24 12.073c0 5.989-4.394 10.954-10.13 11.855v-8.363h2.789l.531-3.46h-3.32V9.86c0-.947.464-1.869 1.95-1.869h1.509V5.045s-1.37-.234-2.679-.234c-2.734 0-4.52 1.657-4.52 4.656v2.637H7.091v3.46h3.039v8.363C4.395 23.025 0 18.061 0 12.073c0-6.627 5.373-12 12-12s12 5.372 12 12z"
+                                                fill="currentColor" opacity="1" data-original="#000000"
+                                                class="hovered-path"></path>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="ft_svg">
+                                <a href="https://www.youtube.com">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0"
+                                        viewBox="0 0 24 24" style="enable-background:new 0 0 512 512"
+                                        xml:space="preserve" class="hovered-paths">
+                                        <g>
+                                            <path
+                                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.546 12 3.546 12 3.546s-7.505 0-9.377.504A3.015 3.015 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.504 9.376.504 9.376.504s7.505 0 9.377-.504a3.018 3.018 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.546 15.569V8.431L15.818 12l-6.272 3.569z"
+                                                fill="currentColor" opacity="1" data-original="#000000"
+                                                class="hovered-path"></path>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="messa">
+                <a href="https://wa.me/919072515352?text=Hey%20%F0%9F%91%8B%2C%20I%20need%20to%20know%20more%20%F0%9F%98%83">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="512" height="512" x="0" y="0" viewBox="0 0 682 682.667"
+                        style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                        <g>
+                            <path fill-rule="evenodd"
+                                d="M544.387 93.008C484.512 33.063 404.883.035 320.05 0 145.246 0 2.98 142.262 2.91 317.113c-.024 55.895 14.577 110.457 42.331 158.551L.25 640l168.121-44.102c46.324 25.27 98.477 38.586 151.55 38.602h.134c174.785 0 317.066-142.273 317.132-317.133.036-84.742-32.921-164.418-92.8-224.36zM320.05 580.94h-.11c-47.296-.02-93.683-12.73-134.16-36.742l-9.62-5.715-99.766 26.172 26.628-97.27-6.27-9.972c-26.386-41.969-40.32-90.476-40.296-140.281.055-145.332 118.305-263.57 263.7-263.57 70.406.023 136.59 27.476 186.355 77.3s77.156 116.051 77.133 186.485C583.582 462.69 465.34 580.94 320.05 580.94zm144.586-197.418c-7.922-3.968-46.883-23.132-54.149-25.78-7.258-2.645-12.547-3.962-17.824 3.968-5.285 7.93-20.469 25.781-25.094 31.066-4.625 5.29-9.242 5.953-17.168 1.985-7.925-3.965-33.457-12.336-63.726-39.332-23.555-21.012-39.457-46.961-44.082-54.89-4.617-7.938-.04-11.813 3.476-16.173 8.578-10.652 17.168-21.82 19.809-27.105 2.644-5.29 1.32-9.918-.664-13.883-1.977-3.965-17.824-42.969-24.426-58.84-6.437-15.445-12.965-13.36-17.832-13.601-4.617-.231-9.902-.278-15.187-.278-5.282 0-13.868 1.98-21.133 9.918-7.262 7.934-27.73 27.102-27.73 66.106s28.394 76.683 32.355 81.972c3.96 5.29 55.879 85.328 135.367 119.649 18.906 8.172 33.664 13.043 45.176 16.695 18.984 6.031 36.254 5.18 49.91 3.14 15.226-2.277 46.879-19.171 53.488-37.68 6.602-18.51 6.602-34.374 4.617-37.683-1.976-3.304-7.261-5.285-15.183-9.254zm0 0"
+                                fill="currentColor" opacity="1" data-original="#000000" class=""></path>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+
+            <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,254 @@
+#menu_c{
+    width: 160px;
+    border: 1px solid transparent;
+    position: fixed;
+    top: 58px;
+    right: 0;
+    z-index: 101;
+    backdrop-filter: blur(10px);
+    background-color: rgba(194, 194, 194, 0.4);
+    display: none;
+}
+.menu_c_in{
+    width: 100%;
+    height: 300px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 35px; */
+}
+.menu_top{
+    width: 90%;
+    /* height: 100px; */
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.menu_top_d{
+    width: 100%;
+    height: 40px;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+.menu_top_d:hover{
+    background-color: aliceblue;
+}
+.menu_top_d a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #000;
+}
+
+/* PopUP */
+#parent_div{
+    width: 100%;
+    border: 1px solid transparent;
+    margin: auto;
+}
+.my_div{
+    width: 100%;
+    height: 670px;
+    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    z-index: 105;
+    flex-wrap: wrap;
+    display: none;  
+}
+.popUp{
+    max-width: 900px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+}
+.popUp_left{
+    width: 450px;
+    /* width: 100%; */
+    /* height: 500px; */
+    border: 1px solid transparent;
+    /* border-radius: 15px 0px 0px 0px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popUp_left_img{
+    width: 400px;
+    /* width: 100%; */
+    /* height: 450px; */
+    border: 1px solid transparent;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: snow;
+}
+.popUp_left img{
+    max-width: 350px;
+    width: 100%;
+    height: 350px;
+}
+.popUp_right{
+    width: 450px;
+    /* width: 100%; */
+    /* height: 500px; */
+    border: 1px solid transparent;
+    border-radius: 0px 15px 15px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    gap: 35px;
+}
+.popUp_text{
+    width: 400px;
+    height: 80px;
+    border: 1px solid transparent;
+}
+.popUp_text p{
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 25px;
+}
+.popUp_price{
+    width: 400px;
+    height: 65px;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* gap: 10px; */
+}
+.popUp_price_but{
+    width: 150px;
+    height: 40px;
+    border: 1px solid;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    background-color: snow;
+}
+.popUp_price_butt{
+    width: 50px;
+    height: 40px;
+    background-color: #545454;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+}
+.price-co{
+    width: 50px;
+    height: 40px;
+    border: 1px solid transparent;
+    margin-top: -41px;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popUp_price a{
+    font-size: 18px;
+    font-weight: 600;
+}
+.prp{
+    width: 350px;
+    height: 30px;
+    border: 1px solid transparent;
+    gap: 15px;
+    /* display: flex; */
+}
+.prp a:first-child{
+    color: orangered;
+}
+.prp a:last-child{
+    margin-left: 10px;
+}
+.mrp{
+    width: 350px;
+    height: 20px;
+    border: 1px solid transparent;
+}
+.mrp a{
+    font-size: 16px;
+    color: #545454;
+    font-weight: 500;
+}
+.mrp strike{
+    font-size: 13px;
+    color: #545454;
+}
+.popUp_Buy{
+    width: 250px;
+    height: 65px;
+    border: 1px solid transparent;
+}
+.popUp_Buy button{
+    width: 250px;
+    height: 65px;
+    background-color: rgb(26, 26, 26, 0.8);
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+}
+.popUp_Buy button:hover{
+    background-color: rgb(26, 26, 26);
+}
+@media screen and (max-width:915px) {
+    .my_div{
+        flex-direction: column;
+        justify-content: start;
+        height: 900px;
+    }
+    .popUp{
+        flex-direction: column;
+        align-items: center;
+    }
+    .popUp_left_img img{
+        width: 250px;
+        height: 250px;
+    }
+    .popUp_left{
+        height: 250px;
+    }
+    .popUp_right{
+        height: 330px;
+        justify-content: space-between;
+        gap: 0px;
+    }
+    .popUp_text{
+        width: 350px;
+    }
+    .prp {
+        width: 300px;
+    }
+    .mrp {
+        width: 300px;
+    }
+}
+@media screen and (min-width:916px) {
+    .popUp_right{
+        height: 450px;
+    }
+}
