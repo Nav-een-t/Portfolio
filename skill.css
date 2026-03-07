@@ -1,0 +1,74 @@
+#skill{
+    width: 100%;
+    min-height: 10vh;
+    margin-bottom: 135px;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 55px;
+    scroll-margin-top: 150px;
+
+}
+.skill_hd{
+    width: 170px;
+    height: 50px;
+    border: solid red;
+    border-width: 0px 0px 5px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.skill_hd a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+}
+.skl_cont{
+    max-width: 1200px;
+    width: 100%;
+    /* height: 250px; */
+    border: 1px solid transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+}
+.skll{
+    width: 200px;
+    height: 250px;
+    border: 1px solid rgb(211, 211, 211, 0.5);
+    border-radius: 10px;
+    transition: transform 1.3s;
+}
+.skll_hd{
+    width: 100%;
+    height: 50px;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.skll_hd a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+.skll_img{
+    width: 100%;
+    height: 200px;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.skll_img img{
+    width: 100px;
+    height: 100px;
+}
+.skll:hover{
+    /* background-color: red; */
+    transform: translateY(-7px);
+    box-shadow: 0px 0px 12px rgba(128, 128, 128, 0.6);
+}
