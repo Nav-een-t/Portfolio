@@ -489,16 +489,16 @@ body{
     /* background-color: yellowgreen; */
     border: solid #dadee4 ;
     border-width: 1px 0px 0px 0px ;
-    top: 527px;
+    /* top: 527px; */
     position: fixed;
     display: flex; 
     justify-content: space-evenly;
     display: none;
+    bottom: 0;
 }
 .home_down{
     width: 48px;
     height: 48px;
-    /* background-color: aqua; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -563,7 +563,8 @@ body{
     height: 55px;
     border: 1px solid transparent;
     position: fixed;
-    top: 575px;
+    /* top: 575px; */
+    bottom: 32px;
     right: 32px;
     background-color: #fffeff;
     border-radius: 30px;
@@ -1237,10 +1238,10 @@ body{
     .more{
         display: none;
     }
-    .message_right{
+    /* .message_right{
         top: 487px;
-        /* z-index: 1; */
-    }
+        z-index: 1;
+    } */
     .right_in{
         margin-left: 13px;
  
@@ -1345,7 +1346,9 @@ body{
         .message_right{
             width: 54px;
             height: 54px;
-            top: 438px;
+            bottom: 81px;
+            /* top: 438px; */
+            /* bottom: 500px; */
             right: 33px;
         }
         .message_right p{
@@ -1426,6 +1429,9 @@ body{
             border-radius: 0px;
         }
         .comment_sec{
+            display: none;
+        }
+        .message_right{
             display: none;
         }
     }
