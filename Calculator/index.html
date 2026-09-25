@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calc_in">
+        <div class="calculator">
+            <div class="calcu_top">
+                <a id="choice"></a>
+                <a id="first"></a>
+            </div>
+            <div class="calcu_bot">
+                <div class="calcu_but">
+                    <button class="calcu_but_num" onclick="num(7)">
+                        <a>7</a>
+                    </button>
+                    <button class="calcu_but_num" onclick="num(8)">
+                        <a>8</a>
+                    </button>
+                    <button class="calcu_but_num" onclick="num(9)">
+                        <a>9</a>
+                    </button>
+                    <button class="calcu_but_num" onclick="choice('+')">
+                        <a>+</a>
+                    </button>
+                </div>
+                <div class="calcu_but">
+                    <button class="calcu_but_num" onclick="num(4)">
+                        <a>4</a>
+                    </button>
+                    <button class="calcu_but_num" onclick="num(5)">
+                        <a>5</a>
+                    </button>
+                    <button class="calcu_but_num" onclick="num(6)">
+                        <a>6</a>
+                    </button>
+                    <button class="calcu_but_num" onclick="choice('-')">
+                        <a>-</a>
+                    </button>
+                </div>
+                <div class="calcu_but">
+                    <button class="calcu_but_num" onclick="num(1)">
+                        <a>1</a>
+                    </button>
+                    <button class="calcu_but_num" onclick="num(2)">
+                        <a>2</a>
+                    </button>
+                    <button class="calcu_but_num" onclick="num(3)">
+                        <a>3</a>
+                    </button>
+                    <button class="calcu_but_num" onclick="choice('*')">
+                        <a>*</a>
+                    </button>
+                </div>
+                <div class="calcu_but">
+                    <button class="calcu_but_num_z" onclick="num(0)">
+                        <a>0</a>
+                    </button>
+                    <button class="calcu_but_num" onclick="dot()">
+                        <a>.</a>
+                    </button>
+
+                    </button>
+                    <button class="calcu_but_num" onclick="choice('/')">
+                        <a>/</a>
+                    </button>
+
+                </div>
+                <div class="calcu_but">
+                    <button class="calcu_but_num" onclick="ac()">
+                        <a>AC</a>
+                    </button>
+                    </button>
+                    <button class="calcu_but_num" onclick="del()">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="512" height="512" x="0" y="0" viewBox="0 0 24 24"
+                            style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                            <g>
+                                <path
+                                    d="M20.004 5h-11c-.837 0-1.852.452-2.412 1.074L2.53 10.588a2.134 2.134 0 0 0 0 2.824l4.062 4.514C7.152 18.548 8.167 19 9.004 19h11c1.103 0 2-.897 2-2V7c0-1.103-.898-2-2-2zm-3.293 8.293a.999.999 0 1 1-1.414 1.414l-1.293-1.293-1.292 1.293a1.001 1.001 0 0 1-1.415-1.414L12.59 12l-1.293-1.293a.999.999 0 1 1 1.414-1.414l1.292 1.293 1.293-1.293a.999.999 0 1 1 1.414 1.414L15.418 12z"
+                                    fill="currentcolor" opacity="1" data-original="#000000"></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <button class="calcu_but_num_eq" onclick="eq()">
+                        <a>=</a>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

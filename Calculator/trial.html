@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .border {
+        width: 900px;
+        height: 550px;
+        border: 2px solid black;
+        margin: auto;
+        border-radius: 10px;
+        background: #857f7f;
+      }
+      .calculator {
+        width: 350px;
+        height: 520px;
+        border: 2px solid black;
+        margin: auto;
+        margin-top: 20px;
+        border-radius: 10px;
+        background: #0c0a0a;
+      }
+      .screen {
+        width: 300px;
+        height: 100px;
+        border: 2px solid black;
+        margin: auto;
+        margin-top: 20px;
+        border-radius: 10px;
+        background: #e7e4e4;
+      }
+      .numbers {
+        margin: auto;
+        width: 300px;
+        margin-top: 20px;
+
+        /* background: #b5b0b0; */
+      }
+      .yellow {
+        background: rgb(228, 150, 24);
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+        border-radius: 10px;
+        margin: 5px;
+      }
+      .dark {
+        background: #d3e4eb;
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+        border-radius: 10px;
+        margin: 5px;
+      }
+      .equalto {
+        background: rgb(38, 189, 129);
+        width: 135px;
+        height: 60px;
+        font-size: 20px;
+        border-radius: 10px;
+        margin: 5px;
+      }
+      #display1 {
+        text-align: right;
+        margin-right: 10px;
+        font-size: 30px;
+        position: relative;
+        top: -45px;
+      }
+      #display2 {
+        text-align: right;
+        margin-right: 10px;
+        font-size: 30px;
+
+        /* margin-top: 30px; */
+      }
+      .meele {
+        height: 50%;
+        width: 100%;
+        /* background: red; */
+      }
+      .thhaye {
+        height: 50%;
+        width: 100%;
+        /* background: blue; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="border">
+      <div class="calculator">
+        <div class="screen">
+          <div class="meele"><p id="display2"></p></div>
+          <div class="thhaye"><p id="display1"></p></div>
+          <!-- <p id="display2"></p>
+          <p id="display1"></p> -->
+        </div>
+        <div class="numbers">
+          <div class="onn">
+            <button onclick="allClear()" class="yellow">AC</button>
+            <button onclick="Clear()" class="yellow">C</button>
+            <button onclick="clearOne()" class="yellow">DEL</button>
+            <button onclick="operate('/')" class="yellow">/</button>
+          </div>
+          <div class="raand">
+            <button onclick="take('7')" class="dark">7</button>
+            <button onclick="take('8')" class="dark">8</button>
+            <button onclick="take('9')" class="dark">9</button>
+            <button onclick="operate('*')" class="yellow">*</button>
+          </div>
+          <div class="muun">
+            <button onclick="take('4')" class="dark">4</button>
+            <button onclick="take('5')" class="dark">5</button>
+            <button onclick="take('6')" class="dark">6</button>
+            <button onclick="operate('-')" class="yellow">-</button>
+          </div>
+          <div class="naal">
+            <button onclick="take('1')" class="dark">1</button>
+            <button onclick="take('2')" class="dark">2</button>
+            <button onclick="take('3')" class="dark">3</button>
+            <button onclick="operate('+')" class="yellow">+</button>
+          </div>
+          <div class="anch">
+            <button onclick="take('0')" class="dark">0</button>
+            <button onclick="take('.')" class="dark">.</button>
+            <button onclick="calculate()" class="equalto">=</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let display1 = document.getElementById("display1");
+      let display2 = document.getElementById("display2");
+      let currentInput = "";
+      let previousInput = "";
+      let a = [];
+
+      function take(num) {
+        // if (display2.innerText !== "") {
+        //   display1.innerText = "";
+        //   currentInput = "";
+        // }
+        if (num === "." && currentInput.includes(".")) {
+          return;
+        }
+        if (num === "." && currentInput === "") {
+          num = "0.";
+        }
+        if (
+          // currentInput !== "" &&
+          // display1.innerText !== "" &&
+          display2.innerText === "Ans"
+        ) {
+          // display1.innerText === "";
+          currentInput = "";
+          display2.innerText = "";
+        }
+        currentInput += num;
+        display1.innerText = currentInput.substring(0, 10);
+      }
+
+      function operate(op) {
+        if (currentInput === "") return;
+        display2.innerText = op;
+        a.push(Number(currentInput.substring(0, 10)));
+        currentInput = "";
+        display1.innerText = "";
+      }
+
+      function calculate() {
+        if (display1.innerText === "") {
+          return;
+        } else {
+          currentInput = display1.innerText;
+          a.push(Number(currentInput.substring(0, 10)));
+          // display2.innerText = "";
+
+          function Single(c, b) {
+            if (display2.innerText === "+") {
+              return c + b;
+            } else if (display2.innerText === "-") {
+              return c - b;
+            } else if (display2.innerText === "/") {
+              return c / b;
+            } else {
+              return c * b;
+            }
+          }
+          result = a.reduce(Single);
+          console.log(typeof result);
+          display1.innerText = result.toString().substring(0, 10);
+          currentInput = display1.innerText;
+          a = [];
+          display2.innerText = "Ans";
+        }
+      }
+
+      function allClear() {
+        display1.innerText = "";
+        display2.innerText = "";
+        a = [];
+        currentInput = "";
+      }
+
+      function Clear() {
+        if (currentInput === "") {
+          //   if (a.length === 0) {
+          //     display1.innerText = "";
+          //   } else {
+          a.pop();
+        }
+        // }
+        currentInput = "";
+        display1.innerText = a.length > 0 ? a[a.length - 1] : "";
+      }
+
+      function clearOne() {
+        currentInput = currentInput.slice(0, -1);
+        display1.innerText = currentInput;
+      }
+    </script>
+  </body>
+</html>
