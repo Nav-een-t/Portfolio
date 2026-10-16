@@ -17,6 +17,13 @@ function click() {
     dropdown.classList.remove('show');
 }
 
+
+function numberl() {
+    let inpt = document.querySelector('.input-text');
+    inpt.value = '+91 '
+}
+
+
 function closeCat() {
     let h = document.getElementById('dropdown');
     let z = document.getElementById('menu_c');
